@@ -19,6 +19,13 @@ const app = new Vue({
       });
       comment.value = "";
     },
+    doChangeState: function (item) {
+      item.state = item.state ? 0 : 1;
+    },
+    doRemove: function (item) {
+      var index = this.todos.indexOf(item);
+      this.todos.splice(index, 1);
+    },
   },
   watch: {
     todos: {
