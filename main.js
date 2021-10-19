@@ -2,6 +2,12 @@ const app = new Vue({
   el: "#app",
   data: {
     todos: [],
+    options: [
+      { value: -1, label: "すべて" },
+      { value: 0, label: "作業中" },
+      { value: 1, label: "完了" },
+    ],
+    current: -1,
   },
   created() {
     this.todos = todoStorage.fetch();
