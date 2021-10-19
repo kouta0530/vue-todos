@@ -25,7 +25,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in todos" v-bind:key="item/id">
+          <tr v-for="item in computedTodos" v-bind:key="item.id">
             <th>{{ item.id }}</th>
             <th>{{ item.comment }}</th>
             <td class="state">
