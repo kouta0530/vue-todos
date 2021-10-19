@@ -17,6 +17,14 @@ const app = new Vue({
       comment.value = "";
     },
   },
+  watch: {
+    todos: {
+      handler: function (todos) {
+        todoStorage.save(todos);
+      },
+      deep: true,
+    },
+  },
 });
 
 var STORAGE_KEY = "todos-vuejs-demo";
